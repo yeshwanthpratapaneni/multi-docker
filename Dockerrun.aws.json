@@ -1,5 +1,5 @@
 {
-    "AWSEBDockerrunVersion": 2,
+    "AWSEBDockerrunVersion": "2",
     "containerDefinitions": [
       {
         "name": "client",
@@ -13,14 +13,14 @@
         "image": "ypratapa1988/multi-server",
         "hostname": "api",
         "essential": false,
-        "memory": 128
+        "memory": "128"
       },
       {
         "name": "worker",
         "image": "ypratapa1988/multi-worker",
         "hostname": "worker",
         "essential": false,
-        "memory": 128
+        "memory": "128"
       },
       {
         "name": "nginx",
@@ -34,7 +34,7 @@
           }
         ],
         "links": ["client", "server"],
-        "memory": 128
+        "memory": "128"
       }
     ]
   }
